@@ -135,8 +135,9 @@ GameObject:
   - component: {fileID: 32043038}
   - component: {fileID: 32043041}
   - component: {fileID: 32043040}
+  - component: {fileID: 32043042}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,11 +250,24 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 15424dcfaeef447438914f41f8748d6a, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &32043042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32043037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af25c254bafd14439a66649f5ad6fc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 200
 --- !u!1 &252105063
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +279,7 @@ GameObject:
   - component: {fileID: 252105065}
   - component: {fileID: 252105064}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: Top Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -405,7 +419,7 @@ GameObject:
   - component: {fileID: 826772697}
   - component: {fileID: 826772696}
   m_Layer: 0
-  m_Name: Wall (2)
+  m_Name: Left Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -607,7 +621,7 @@ GameObject:
   - component: {fileID: 1073492605}
   - component: {fileID: 1073492604}
   m_Layer: 0
-  m_Name: Wall (1)
+  m_Name: Bottom Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -647,7 +661,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073492603}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.5, z: 0}
+  m_LocalPosition: {x: 0, y: -5.5, z: 0}
   m_LocalScale: {x: 20, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -685,6 +699,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 489ff967ef7d903459038155e7cc1a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  ball: {fileID: 32043041}
 --- !u!61 &1558332388
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -937,7 +953,7 @@ GameObject:
   - component: {fileID: 2008511765}
   - component: {fileID: 2008511764}
   m_Layer: 0
-  m_Name: Wall (3)
+  m_Name: Right Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
