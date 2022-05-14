@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
-public Rigidbody2D rb { get; private set; }
+protected Rigidbody2D _rigidbody;
 
 public float speed =10.0f;
 
 private void Awake()
 {
- rb = GetComponent<Rigidbody2D>();
+ _rigidbody = GetComponent<Rigidbody2D>();
+}
+public void ResetPosition()
+{
+    _rigidbody.position = new Vector2(_rigidbody.position.x, 0.0f);
 }
 
 }
